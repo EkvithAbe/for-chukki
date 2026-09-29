@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf2ed" />
+    <meta name="description" content="A little love note, just for Chukki." />
+    <title>Chukki ♡ Tharaha Wenna Epa, Man Adarei Nee</title>
+    <link rel="icon" href="assets/heart.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="page-header">
+        <div class="brand">
+          <svg class="envelope-icon" viewBox="0 0 32 28" fill="none" aria-hidden="true">
+            <rect x="2" y="5" width="28" height="20" rx="4" />
+            <path d="m3 7 13 10L29 7M3 23l8-8m18 8-8-8" />
+            <path class="icon-heart" d="M16 10s-6-3.4-6-6a3.2 3.2 0 0 1 6-1.4A3.2 3.2 0 0 1 22 4c0 2.6-6 6-6 6Z" />
+          </svg>
+          <span>a little love note</span>
+        </div>
+        <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">
+          <span aria-hidden="true">♡</span> <span id="motion-label">Pause hearts</span>
+        </button>
+      </header>
+
+      <main>
+        <p class="dedication">FOR CHUKKI • “THARAHA WENNA EPA MAN ADAREI NEE” ♡</p>
+        <section class="love-card" aria-label="A little love note for Chukki">
+          <div class="illustration-panel">
+            <span class="postmark" aria-hidden="true">SPECIAL<br />DELIVERY<span>♡</span></span>
+            <span class="little-star star-one" aria-hidden="true">✧</span>
+            <span class="little-star star-two" aria-hidden="true">✧</span>
+            <span class="drawn-heart heart-one" aria-hidden="true">♡</span>
+            <span class="drawn-heart heart-two" aria-hidden="true">♡</span>
+            <div class="portrait-halo" aria-hidden="true"></div>
+            <img id="sticker" class="sticker" src="assets/bunny.png" alt="A shy little bunny with a pink bow asking for forgiveness" width="3584" height="3748" fetchpriority="high" />
+            <p class="handwritten" id="illustration-caption">tharaha wenna epa... man adarei nee 🥺♡</p>
+            <span class="picture-label" aria-hidden="true">a tiny delivery of happy feelings</span>
+          </div>
+
+          <div class="letter-panel">
+            <div class="letter-content" id="letter-content">
+              <p class="eyebrow" id="eyebrow">01 <span>—</span> A LITTLE APOLOGY & A LOT OF LOVE</p>
+              <h1 id="headline" tabindex="-1">Hey Chukki,<br />tharaha wenna epa…<br /><em>man adarei nee ♡</em></h1>
+              <p class="message" id="message">I know you’re upset with me right now, and I’m so sorry. Please don't stay mad... you know how much I love you. I made this little corner of the universe just to bring that beautiful smile back.</p>
+              <div class="actions" id="story-actions">
+                <button class="button button-primary" id="next-button" type="button">Listen to me for a moment <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="actions proposal-actions" id="proposal-actions" hidden>
+                <button class="button button-primary" id="yes-button" type="button">Yes, I’d love to! <span aria-hidden="true">♡</span></button>
+                <button class="button button-secondary" id="shy-no-button" type="button">No</button>
+              </div>
+              <div class="actions" id="success-actions" hidden>
+                <button class="button button-primary" id="note-button" type="button">One more little thing <span aria-hidden="true">♡</span></button>
+              </div>
+              <div class="actions" id="decline-actions" hidden>
+                <button class="button button-secondary" id="return-button" type="button">Read it from the beginning <span aria-hidden="true">↺</span></button>
+              </div>
+              <p class="action-note" id="action-note" role="status">I promise, every word comes straight from my heart.</p>
+            </div>
+            <div class="letter-bottom">
+              <button class="text-button back-button" id="back-button" type="button" aria-label="Go to the previous note" disabled>← Back</button>
+              <span class="letter-signature">yours, a little nervously ♡</span>
+            </div>
+          </div>
+        </section>
+
+        <nav class="journey" aria-label="Your love note progress">
+          <ol class="progress" id="progress">
+            <li aria-current="step"><span class="step-dot"></span><span class="sr-only">A little apology, step 1 of 5</span></li>
+            <li><span class="step-dot"></span><span class="sr-only">Sweet surprises, step 2 of 5</span></li>
+            <li><span class="step-dot"></span><span class="sr-only">Endless cuddles, step 3 of 5</span></li>
+            <li><span class="step-dot"></span><span class="sr-only">Little moments, step 4 of 5</span></li>
+            <li><span class="step-dot"></span><span class="sr-only">One little question, step 5 of 5</span></li>
+          </ol>
+          <p id="progress-caption">Every little story starts with a heartfelt hello.</p>
+          <button class="text-button skip-button" id="skip-button" type="button">Psst… skip to the question <span aria-hidden="true">↗</span></button>
+          <button class="text-button" id="replay-button" type="button" hidden>Read our little story again <span aria-hidden="true">↺</span></button>
+        </nav>
+      </main>
+
+      <footer class="page-footer"><span aria-hidden="true">♡</span> a small page. a very big feeling.</footer>
+    </div>
+
+    <dialog id="love-note" aria-labelledby="note-title">
+      <button class="close-note" id="close-note" type="button" aria-label="Close love note">×</button>
+      <div class="note-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">A NOTE FOR MY FAVORITE PERSON</p>
+      <h2 id="note-title">My dearest <em>Chukki,</em></h2>
+      <p class="apology-quote"><strong>“Tharaha wenna epa, man adarei nee…”</strong></p>
+      <p>I know I upset you, and seeing you angry breaks my heart into tiny pieces. You mean more to me than words can ever describe.</p>
+      <p>You have this magical way of turning any ordinary moment into something unforgettable. A simple message from you, your laugh, even just hearing your voice makes my whole day brighter.</p>
+      <p>I want to be there for you through everything—the happy days, the quiet days, and even the days we disagree. More shared smiles. More warmest hugs. More us.</p>
+      <p>So please forgive me, and let’s keep making sweet memories together:<br /><strong>you and me, always and forever.</strong></p>
+      <p class="note-signoff">With all my love and endless cuddles,<br />someone who’s truly, deeply in love with you ♡</p>
+    </dialog>
+    <noscript><p class="noscript-note">Please enable JavaScript to open the rest of Chukki’s love note.</p></noscript>
+  </body>
+</html>
